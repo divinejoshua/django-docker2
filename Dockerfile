@@ -29,10 +29,10 @@ FROM nginx:latest
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
 # copy the static files
-COPY --from=0 /app/static /app/static
+COPY --from=0 /static /static
 
 #Expose port 80 for nginx
 EXPOSE 80
 
 # Start Nginx
-CMD ["nginx", "-g", "daemon off;"]
+# CMD ["nginx", "-g", "daemon off;"]
