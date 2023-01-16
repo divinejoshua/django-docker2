@@ -26,7 +26,7 @@ CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 FROM nginx:latest
 
 # copy the nginx configuration
-COPY nginx.conf /etc/nginx/conf.d/
+COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
 # copy the static files
 COPY --from=0 /app/static /app/static
