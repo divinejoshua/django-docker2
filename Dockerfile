@@ -28,7 +28,7 @@ FROM nginx:latest
 # copy the nginx configuration
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
-# copy the static files
+# copy the static files 
 COPY --from=0 /static /static
 
 #Expose port 80 for nginx
